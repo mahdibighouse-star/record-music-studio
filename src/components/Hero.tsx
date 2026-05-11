@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { ArrowRight, Globe } from "lucide-react";
+import { ArrowRight, ArrowDown, Globe } from "lucide-react";
 import { AnimatedLetterText } from "./AnimatedLetterText";
 
 const partners = ["BIG LEMSI", "BMG", "UMG", "SACEM", "SPOTIFY"];
@@ -71,6 +71,17 @@ export function Hero() {
                   <span className="w-10 h-10 rounded-full bg-white text-brand-bg flex items-center justify-center group-hover:bg-brand-bg group-hover:text-white transition-colors duration-300">
                     <ArrowRight size={16} />
                   </span>
+                </a>
+
+                <a
+                  href="#contact"
+                  className="group inline-flex items-center gap-2 border border-white/25 hover:border-white hover:bg-white/5 text-white px-6 py-3 rounded-full font-medium transition-colors duration-300"
+                >
+                  Voir le formulaire
+                  <ArrowDown
+                    size={16}
+                    className="group-hover:translate-y-0.5 transition-transform"
+                  />
                 </a>
 
                 <div className="flex items-center gap-3">
