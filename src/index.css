@@ -13,6 +13,11 @@
 }
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+  }
+
   body {
     background-color: var(--color-brand-bg);
     color: var(--color-brand-ink);
