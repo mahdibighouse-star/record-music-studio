@@ -37,9 +37,9 @@ export function AboutHayce() {
             className="rounded-2xl overflow-hidden aspect-video"
           >
             <img
-              src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?q=80&w=2564&auto=format&fit=crop"
-              alt="Hayce Lemsi in studio"
-              className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
+              src="/images/hayce-client.jpg"
+              alt="Hayce Lemsi avec un artiste en studio"
+              className="w-full h-full object-cover"
             />
           </motion.div>
 
@@ -51,9 +51,9 @@ export function AboutHayce() {
             className="rounded-2xl overflow-hidden aspect-[21/9]"
           >
             <img
-              src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=2564&auto=format&fit=crop"
-              alt="Microphone"
-              className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
+              src="/images/album-cover.jpg"
+              alt="Hayce Lemsi — Électron Libre 2"
+              className="w-full h-full object-cover"
             />
           </motion.div>
         </div>

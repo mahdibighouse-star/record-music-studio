@@ -44,8 +44,8 @@ export function Features() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 1.2, ease: "easeOut" }}
                 viewport={{ once: true, amount: 0.2 }}
-                src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?q=80&w=2564&auto=format&fit=crop"
-                alt="Studio setup"
+                src="/images/studio-wide.jpg"
+                alt="Record Music Studio — Luxembourg"
                 className="w-full aspect-[4/5] object-cover rounded-xl"
               />
             </div>

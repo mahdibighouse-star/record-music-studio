@@ -6,18 +6,18 @@ import { AnimatedLetterText } from "./AnimatedLetterText";
 const slides = [
   {
     id: 1,
-    image: "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?q=80&w=2564&auto=format&fit=crop",
-    alt: "Music studio mixing desk"
+    image: "/images/studio-wide.jpg",
+    alt: "Record Music Studio — vue d'ensemble"
   },
   {
     id: 2,
-    image: "https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?q=80&w=2564&auto=format&fit=crop",
-    alt: "Recording studio acoustic"
+    image: "/images/hayce-sunglasses.jpg",
+    alt: "Hayce Lemsi dans le studio"
   },
   {
     id: 3,
-    image: "https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?q=80&w=2564&auto=format&fit=crop",
-    alt: "Piano and microphone"
+    image: "/images/hayce-gesture.jpg",
+    alt: "Hayce Lemsi en session"
   }
 ];
 

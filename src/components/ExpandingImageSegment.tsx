@@ -21,8 +21,8 @@ export function ExpandingImageSegment() {
         className="w-full h-full overflow-hidden relative shadow-2xl"
       >
         <img 
-          src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?q=80&w=2564&auto=format&fit=crop" 
-          alt="Studio environment"
+          src="/images/hayce-client-front.jpg"
+          alt="Hayce Lemsi avec un artiste à Record Music Studio"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-brand-ink/20 pointer-events-none" />
