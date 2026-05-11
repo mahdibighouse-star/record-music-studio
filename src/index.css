@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Inter", ui-sans-serif, system-ui, sans-serif; /* The PDF uses a sans-serif font for headings too, let's keep it bold sans or modern */
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  
+  --color-brand-bg: #0D0914;     /* Deep dark purple/black */
+  --color-brand-ink: #FFFFFF;    /* White */
+  --color-brand-muted: #A393BB;  /* Muted pale purple */
+  --color-brand-accent: #9254F5; /* Vibrant purple from PDF */
+  --color-brand-card: #201335;   /* Dark purple for cards */
+}
+
+@layer base {
+  body {
+    background-color: var(--color-brand-bg);
+    color: var(--color-brand-ink);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-serif);
+    font-weight: 700;
+  }
+}
+
+/* Utilities for standardizing sizes */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
