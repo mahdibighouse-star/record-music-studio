@@ -1,113 +1,83 @@
 import { motion } from "motion/react";
-import { Music, Mic, Compass } from "lucide-react";
+import { useRef } from "react";
+import { AnimatedText } from "./AnimatedText";
 import { AnimatedLetterText } from "./AnimatedLetterText";
 
 const features = [
   {
-    icon: Music,
-    image:
-      "https://images.unsplash.com/photo-1598653222000-6b7b7a552625?q=80&w=1600&auto=format&fit=crop",
-    tag: "01 — Le Concept",
-    title: "Sessions pensées pour les artistes sérieux",
-    description:
-      "Single, EP, album, résidence artistique ou simple session de travail. Un cadre studio pro à Luxembourg.",
+    number: "01",
+    title: "Le concept",
+    description: "Un studio pensé pour les artistes sérieux : single, EP, album, résidence artistique ou simple session de travail."
   },
   {
-    icon: Mic,
-    image: null,
-    tag: "02 — La Valeur Forte",
-    title: "Direction vocale & culture rap",
-    description:
-      "Hayce Lemsi apporte un regard d'artiste, une direction vocale et une vraie crédibilité auprès des artistes urbains.",
+    number: "02",
+    title: "La valeur forte",
+    description: "Hayce Lemsi apporte un regard d'artiste, une direction vocale, une culture rap et une vraie crédibilité auprès des artistes urbains."
   },
   {
-    icon: Compass,
-    image: null,
-    tag: "03 — La Promesse",
-    title: "Viens avec une idée. Repars avec une direction.",
-    description:
-      "Record Music Studio est pensé pour les artistes qui veulent être pris au sérieux et construire un projet solide.",
-  },
+    number: "03",
+    title: "La promesse",
+    description: "Record Music Studio est pensé pour les artistes qui veulent être pris au sérieux. Viens avec une idée. Repars avec une direction."
+  }
 ];
 
 export function Features() {
-  return (
-    <section
-      id="services"
-      className="py-28 md:py-36 px-4 md:px-6 bg-brand-bg text-white relative"
-    >
-      <div className="max-w-[1400px] mx-auto">
-        {/* Header */}
-        <div className="text-center mb-20">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-brand-accent font-medium mb-6"
-          >
-            <span className="w-2 h-2 rounded-full bg-brand-accent" />
-            C'est plus qu'un simple studio
-          </motion.div>
-          <AnimatedLetterText
-            text="Design With Purpose."
-            el="h2"
-            className="block text-4xl md:text-6xl lg:text-7xl font-serif font-bold tracking-tight"
-          />
-          <AnimatedLetterText
-            text="Build With Impact."
-            el="h2"
-            className="block text-4xl md:text-6xl lg:text-7xl font-serif italic font-light text-white/80 tracking-tight mt-1"
-            delay={0.3}
-          />
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            className="max-w-2xl mx-auto mt-8 text-white/70 text-base md:text-lg font-light leading-relaxed"
-          >
-            On aide les artistes à transformer leurs idées en morceaux solides
-            grâce à un accompagnement créatif, une direction artistique claire
-            et une vraie stratégie de sortie.
-          </motion.p>
-        </div>
+  const containerRef = useRef(null);
 
-        {/* Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-          {features.map((f, idx) => {
-            const Icon = f.icon;
-            return (
+  return (
+    <section className="py-32 px-6 md:px-12 relative z-20" ref={containerRef}>
+      <div className="max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-8">
+
+          <div className="lg:col-span-4 sticky top-32 h-fit">
+            <AnimatedText
+              text="Le Studio"
+              className="text-xs uppercase tracking-[0.2em] text-brand-accent font-bold mb-6 block"
+            />
+            <AnimatedLetterText
+              text="C'EST PLUS QU'UN SIMPLE STUDIO"
+              className="text-4xl md:text-5xl font-serif text-white leading-tight"
+            />
+            <div className="mt-8 overflow-hidden rounded-xl shadow-2xl">
+              <motion.img
+                initial={{ opacity: 0, scale: 1.1 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 1.2, ease: "easeOut" }}
+                viewport={{ once: true, amount: 0.2 }}
+                src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?q=80&w=2564&auto=format&fit=crop"
+                alt="Studio setup"
+                className="w-full aspect-[4/5] object-cover rounded-xl"
+              />
+            </div>
+          </div>
+
+          <div className="lg:col-start-6 lg:col-span-7 flex flex-col gap-10 lg:gap-14 pt-12 lg:pt-32">
+            {features.map((feature, idx) => (
               <motion.div
                 key={idx}
-                initial={{ opacity: 0, y: 40 }}
+                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-50px" }}
-                transition={{ duration: 0.7, delay: idx * 0.12 }}
-                className="group relative rounded-2xl overflow-hidden bg-brand-card/70 border border-white/10 hover:border-brand-accent/40 transition-colors p-7 flex flex-col gap-6 min-h-[340px]"
+                transition={{ duration: 0.8, delay: 0.1 * idx }}
+                viewport={{ once: true, margin: "-100px" }}
+                className="flex flex-col md:flex-row gap-6 md:gap-8 relative group bg-[#160D24] text-white p-10 rounded-2xl shadow-xl hover:shadow-brand-accent/20 transition-all duration-500 border border-white/5"
               >
-                {/* Tag row */}
-                <div className="flex items-center justify-between">
-                  <span className="text-xs uppercase tracking-widest text-brand-accent font-medium">
-                    {f.tag}
+                <div className="w-16 shrink-0 border-r border-white/10 pr-6 flex items-center justify-center">
+                  <span className="font-serif text-3xl md:text-4xl italic text-brand-accent/80 group-hover:text-brand-accent transition-colors duration-500">
+                    {feature.number}
                   </span>
-                  <Icon size={18} className="text-white/60" />
                 </div>
-
-                <div className="flex-1 flex flex-col justify-end gap-4">
-                  <h3 className="text-2xl md:text-[26px] font-serif font-bold leading-tight text-white">
-                    {f.title}
+                <div className="flex flex-col gap-4 flex-1">
+                  <h3 className="text-2xl font-sans font-bold uppercase tracking-wide">
+                    {feature.title}
                   </h3>
-                  <p className="text-white/65 text-sm md:text-base font-light leading-relaxed">
-                    {f.description}
+                  <p className="text-brand-muted leading-relaxed font-light text-base md:text-lg">
+                    {feature.description}
                   </p>
                 </div>
-
-                {/* hover glow */}
-                <div className="absolute -bottom-32 -right-20 w-80 h-80 rounded-full bg-brand-accent/0 group-hover:bg-brand-accent/20 blur-3xl transition-all duration-700 pointer-events-none" />
               </motion.div>
-            );
-          })}
+            ))}
+          </div>
+
         </div>
       </div>
     </section>
