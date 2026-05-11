@@ -21,7 +21,7 @@ export function ExpandingImageSegment() {
         className="w-full h-full overflow-hidden relative shadow-2xl"
       >
         <img 
-          src="/images/hayce-client-front.jpg"
+          src="/images/hayce-client.jpg"
           alt="Hayce Lemsi avec un artiste à Record Music Studio"
           className="w-full h-full object-cover"
         />
