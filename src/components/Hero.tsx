@@ -61,11 +61,11 @@ export function Hero() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 1.2 }}
-                className="mt-10 flex items-center gap-5 flex-wrap"
+                className="mt-10 flex flex-col sm:flex-row sm:items-center items-stretch gap-4 sm:gap-5 sm:flex-wrap"
               >
                 <a
                   href="#contact"
-                  className="group inline-flex items-center gap-3 bg-brand-accent hover:bg-white hover:text-brand-bg text-white pl-7 pr-2 py-2 rounded-full font-medium transition-colors duration-300"
+                  className="group inline-flex items-center justify-center sm:justify-start gap-3 bg-brand-accent hover:bg-white hover:text-brand-bg text-white pl-7 pr-2 py-2 rounded-full font-medium transition-colors duration-300"
                 >
                   Réserver une session
                   <span className="w-10 h-10 rounded-full bg-white text-brand-bg flex items-center justify-center group-hover:bg-brand-bg group-hover:text-white transition-colors duration-300">
@@ -75,7 +75,7 @@ export function Hero() {
 
                 <a
                   href="#contact"
-                  className="group inline-flex items-center gap-2 border border-white/25 hover:border-white hover:bg-white/5 text-white px-6 py-3 rounded-full font-medium transition-colors duration-300"
+                  className="group inline-flex items-center justify-center sm:justify-start gap-2 border border-white/25 hover:border-white hover:bg-white/5 text-white px-6 py-3 rounded-full font-medium transition-colors duration-300"
                 >
                   Voir le formulaire
                   <ArrowDown
@@ -84,7 +84,7 @@ export function Hero() {
                   />
                 </a>
 
-                <div className="flex items-center gap-3">
+                <div className="hidden sm:flex items-center gap-3">
                   <div className="flex -space-x-2">
                     {[
                       "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=200&auto=format&fit=crop",
